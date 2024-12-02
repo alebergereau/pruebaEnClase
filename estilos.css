@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*General*/
+:root{
+    --casiBlanco: rgb(255, 214, 214);
+    --casiNegro: rgb(29, 29, 29);
+    --casiGris: rgb(52, 52, 52);
+    --casiVioleta: rgb(200, 137, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--casiNegro);
+    color: var(--casiBlanco);
+}
+
+img{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+}
+
+a:hover{
+    color: var(--casiVioleta);
+}
+
+.contenedor1280{
+    width:1280px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+:is(a, span).btn,.btnB{
+    display: inline-block;
+    background-color: var(--casiBlanco);
+    color: var(--casiNegro);
+    padding:.5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+}
+:is(a, span).btn:hover{
+    color: var(--casiBlanco);
+    background-color: var(--casiNegro);
+    border: 1px solid var(--casiGris);
+}
+
+a.btnB{
+    border: 1px solid var(--casiBlanco);
+    background-color: var(--casiNegro);
+    color: var(--casiBlanco);
+}
+a.btnB:hover{
+    border: 1px solid var(--casiVioleta);
+    color: var(--casiNegro);
+    background-color: var(--casiVioleta);
+}
+
+/* Texto general*/
+h1, h2, h3{
+    font-family: "Exo 2";
+}
+h1{
+    font-size: 3rem; 
+}
+h2{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin: .75rem 0;
+}
+
+p, a{
+    font-family: "Noto Serif";
+    margin: .5rem 0;
+}
+
+/*Header y Footer*/
+header, footer{
+    background-color: var(--casiGris);
+}
+nav, footer > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+nav a{
+    margin: 0 0.5rem;
+}
+
+header > nav > a:nth-child(1) {
+    width: 10%;
+}
+header > nav > a:nth-child(3) {
+    width: 10%;
+    display: flex;
+    justify-content: end;
+}
+
+footer > div, footer > a{
+    width: 10%;
+}
+img.logo{
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+nav > div:nth-of-type(1) > a{
+    border-bottom: 2px solid;
+}
+
+nav > div > a:hover{
+    border-bottom-color:transparent;    
+}
+header > nav > div:nth-child(3) > a, footer > div > div > a{
+    padding:.5rem;
+}
+
+
+/* Portada (header > section > article)*/
+header > section{
+    background: url(img/gradient.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+header > section > article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+
+section#uno > article h1, section#uno > article p{
+    width: 50%;
+}
+
+/*Main sections*/
+main > section{
+    margin: 10rem 0;
+}
+
+main > section#dos > p, main > section#tres > p{
+    width: 40%;
+    margin: 1rem 0 2rem 0;
+}
+
+article > img, figure > img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+.flex > a{
+    width: 100%;
+    color: var(--casiBlanco);
+}
+
+.flex > a > article, figure{
+    background-color: var(--casiGris);
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: all .1s;
+    padding-bottom: 1rem;
+}
+
+
+.flex > a:hover article{
+    background-color:var(--casiVioleta);
+    color: var(--casiGris);
+}
+
+.flex > a > article *:not(img){
+    margin: .5rem 1rem;
+}
+
+section#tres > div{
+    flex-wrap: wrap;
+
+}
+
+figure > figcaption{
+    padding: .75rem 1rem 0;
+}
+
+figure:nth-child(1), figure:nth-child(4){
+    width: calc(70% - 1rem);
+}
+figure:nth-child(2), figure:nth-child(3){
+    width: 30%;
+}
+
+
+/*Ampliacion*/
+
+section#aUno, section#aDos, section#aTres{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+section#aUno > article{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+section#aUno h2, section#aUno > article p{
+    margin: 0 auto;
+}
+
+span.etiqueta{
+    display: inline-block;
+    border-radius: .25rem;
+    background-color: var(--casiVioleta);
+    color: var(--casiGris);
+    padding: .25rem;
+}
+
+/*aDos*/
+#aDos > div:nth-child(1){
+    flex-direction: column;
+    width: 60%;
+}
+
+#aDos > div:nth-child(2){
+    width: 40%;
+}
+
+#aDos figure:nth-child(1){
+    width: 100%;
+}
+#aDos figure:nth-child(2){
+    width: 70%;
+}
+
+#aDos figure img{
+    height: 200px;
+}
+
+#aDos ul{
+    list-style-position: inside;
+    margin-bottom: 2rem;
+}
+
+/*aTres*/
+#aTres{
+    background-image: url(img/gradient.svg);
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+
+#aTres > div{
+    align-items: end;
+}
+
+#aTres > div > *{
+    width: 50%;
+}
+
+#aTres > div > article{
+    padding: 2rem 4rem 2rem 0;
+}
+
+#aTres > div > article > a:nth-of-type(1){
+    margin-right: .5rem;
+}
+
+#aTres > div > img{
+    height: 400px;
+    object-fit: cover;
+    border-radius:.5rem;
+}
